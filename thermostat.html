@@ -1,16 +1,41 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
+    <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+    <script src="jasmine-standalone-3.1.0/src/thermostat.js"></script>
+    <script src="jasmine-standalone-3.1.0/src/thermostatJQuery.js"></script>
     <meta charset="utf-8">
+    <style>
+       a.test {
+         font-weight: bold;
+      }
+      .low-usage {
+    color: green;
+  }
+
+  .medium-usage {
+    color: orange;
+  }
+
+  .high-usage {
+    color: red;
+  }
+    </style>
     <title></title>
   </head>
+
   <body>
-    <h1 id="temperature"></h1>
-    <button id="temperature-up">+</button>
+    <h1 id="temperature">Thermostat</h1>
     <button id="temperature-down">-</button>
-    <button id="temperature-reset">reset</button>
-    power saving mode is <span id="power-saving-status">on</span>
+    <button id="temperature-up">+</button>
+    <button id="temperature-reset">Reset</button>
+    <hr></hr>
+    Power saving mode is <span id="power-saving-status">on</span>
     <button id="powersaving-on">PSM on</button>
     <button id="powersaving-off">PSM off</button>
+    <hr></hr>
+    <input id="select-city" type="text"></input>
+    <button id="get-weather">Local Weather</button>
+    <h1 id="print-weather"></h1>
   </body>
 </html>

@@ -1,6 +1,5 @@
 describe('Thermostat', function(){
 
-
   var thermostat;
 
   beforeEach(function() {
@@ -53,7 +52,8 @@ describe('Thermostat', function(){
 
   describe('reset the thermostat', function(){
     it('resets to 20 degrees', function() {
-      expect(thermostat.reset()).toBe(20)
+      thermostat.resetTemp()
+      expect(thermostat.temperature()).toBe(20)
     });
   });
 
